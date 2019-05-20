@@ -20,6 +20,6 @@ public class HelloController {
         System.out.println("dfdsfsd"+id);
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("index");
-//        return "dfdfd";
+        return modelAndView;
     }
 }
