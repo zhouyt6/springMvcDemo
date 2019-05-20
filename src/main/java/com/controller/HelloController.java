@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @Author: Zhou YingTao
@@ -15,8 +16,10 @@ public class HelloController {
 
     @ResponseBody
     @RequestMapping(value = "getMethod", method = RequestMethod.GET)
-    public String getMethod(Integer id) {
+    public ModelAndView getMethod(Integer id) {
         System.out.println("dfdsfsd"+id);
-        return "dfdfd";
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index");
+//        return "dfdfd";
     }
 }
